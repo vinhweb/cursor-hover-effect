@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background: #000115;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li{
+  list-style: none;
+}
+
+ul li a{
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 3em;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.cursor{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+ul li:hover ~ .cursor{
+  transform: scale(4);
+}
